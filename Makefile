@@ -6,7 +6,7 @@
 #    By: glevin <glevin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/03 16:20:22 by glevin            #+#    #+#              #
-#    Updated: 2024/06/03 16:33:18 by glevin           ###   ########.fr        #
+#    Updated: 2024/06/04 19:22:32 by glevin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ ARFLAGS = rcs
 NAME = libftprintf.a
 
 #Source Files
-SRCS = ft_strlen.c ft_putchar_fd.c ft_printf.c ft_puthex.c \
-	ft_putptr.c ft_putdec.c ft_putnbr_fd.c ft_putstr_fd.c
+SRCS = ft_putchar.c ft_printf.c ft_puthex.c \
+	ft_putptr.c ft_putdec.c ft_putnbr.c ft_putstr.c
 
 #Object Files
 OBJS = $(SRCS:.c=.o)

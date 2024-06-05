@@ -2,3 +2,5 @@
 *.a
 .vscode/*
 main.c
+test
+trip

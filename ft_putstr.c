@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glevin <glevin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/03 15:36:40 by glevin            #+#    #+#             */
-/*   Updated: 2024/06/03 15:38:19 by glevin           ###   ########.fr       */
+/*   Created: 2024/06/03 15:37:38 by glevin            #+#    #+#             */
+/*   Updated: 2024/06/04 19:05:22 by glevin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putstr(char *s)
 {
-	char	c;
+	int	cnt;
 
-	if (n == -2147483648)
+	cnt = 0;
+	if (s == NULL)
+		return (0);
+	while (*s)
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		write(1, s, 1);
+		s++;
+		cnt++;
 	}
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n = -n;
-	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	c = (n % 10) + '0';
-	write(fd, &c, 1);
-	return ;
+	return (cnt);
 }

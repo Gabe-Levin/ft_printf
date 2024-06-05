@@ -6,36 +6,39 @@
 /*   By: glevin <glevin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 15:36:10 by glevin            #+#    #+#             */
-/*   Updated: 2024/06/03 15:38:25 by glevin           ###   ########.fr       */
+/*   Updated: 2024/06/04 20:06:18 by glevin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putdec(double n, int fd)
+int	ft_putdec(double n)
 {
-	int		int_value;
-	double	decimal;
-	int		digit;
+	double		decimal;
+	int			digit;
+	int			cnt;
+	long long	int_part;
 
+	cnt = 0;
 	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		cnt += ft_putchar('-');
 		n = -n;
 	}
-	int_value = (int)n;
-	decimal = n - (double)int_value;
-	ft_putnbr_fd(int_value, fd);
+	int_part  =(long long)n;
+	decimal = n - (double)n;
+	cnt += ft_putnbr((double)n);
 	if (decimal == 0)
-		return ;
-	ft_putchar_fd('.', 1);
+		return (cnt);
+	cnt += ft_putchar('.');
 	while (decimal != 0)
 	{
 		decimal *= 10;
 		digit = (int)decimal;
-		ft_putchar_fd(digit + '0', fd);
+		cnt += ft_putchar(digit + '0');
 		decimal -= digit;
 		if (decimal < 1e-9)
 			break ;
 	}
+	return (cnt);
 }

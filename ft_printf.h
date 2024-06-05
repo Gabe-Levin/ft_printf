@@ -6,7 +6,7 @@
 /*   By: glevin <glevin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 14:32:18 by glevin            #+#    #+#             */
-/*   Updated: 2024/06/03 15:58:04 by glevin           ###   ########.fr       */
+/*   Updated: 2024/06/04 19:22:39 by glevin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putdec(double n, int fd);
-void	ft_puthex(int dec, int is_upper);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putptr(void *p);
-void	ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *str);
+int		ft_putchar(char c);
+int		ft_putdec(double n);
+int		ft_puthex(int dec, int is_upper);
+int		ft_putnbr(int n);
+int		ft_putptr(void *p);
+int		ft_putstr(char *s);
 
 #endif
