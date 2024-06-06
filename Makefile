@@ -6,7 +6,7 @@
 #    By: glevin <glevin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/03 16:20:22 by glevin            #+#    #+#              #
-#    Updated: 2024/06/04 19:22:32 by glevin           ###   ########.fr        #
+#    Updated: 2024/06/06 15:41:06 by glevin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ARFLAGS = rcs
 NAME = libftprintf.a
 
 #Source Files
-SRCS = ft_putchar.c ft_printf.c ft_puthex.c \
+SRCS = ft_putchar.c ft_printf.c ft_puthex.c ft_putnbr_unsigned.c\
 	ft_putptr.c ft_putdec.c ft_putnbr.c ft_putstr.c
 
 #Object Files

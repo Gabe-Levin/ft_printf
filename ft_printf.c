@@ -6,7 +6,7 @@
 /*   By: glevin <glevin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:59:44 by glevin            #+#    #+#             */
-/*   Updated: 2024/06/04 20:18:52 by glevin           ###   ########.fr       */
+/*   Updated: 2024/06/06 15:35:45 by glevin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	handle_convspec(const char **format, va_list args)
 	else if (**format == 'i')
 		cnt += ft_putnbr(va_arg(args, int));
 	else if (**format == 'u')
-		cnt += ft_putnbr(va_arg(args, unsigned int));
+		cnt += ft_putnbr_unsigned(va_arg(args, unsigned int));
 	else if (**format == 'x')
 		cnt += ft_puthex(va_arg(args, unsigned int), 0);
 	else if (**format == 'X')
