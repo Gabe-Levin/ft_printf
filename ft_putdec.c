@@ -6,7 +6,7 @@
 /*   By: glevin <glevin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 15:36:10 by glevin            #+#    #+#             */
-/*   Updated: 2024/06/04 20:06:18 by glevin           ###   ########.fr       */
+/*   Updated: 2024/06/06 17:36:15 by glevin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int	ft_putdec(double n)
 {
-	double		decimal;
-	int			digit;
-	int			cnt;
-	long long	int_part;
+	double	decimal;
+	int		digit;
+	int		cnt;
 
 	cnt = 0;
 	if (n < 0)
@@ -25,7 +24,6 @@ int	ft_putdec(double n)
 		cnt += ft_putchar('-');
 		n = -n;
 	}
-	int_part  =(long long)n;
 	decimal = n - (double)n;
 	cnt += ft_putnbr((double)n);
 	if (decimal == 0)
